@@ -17,12 +17,22 @@
         <div class="panel-heading text-center">
           Wantしたユーザー
         </div>
+        <div class="panel-body">
+          <% @want_users.each do |user| %>
+            <%= link_to user.name, user %>
+          <% end %>
+        </div>
       </div>
     </div>
     <div class="have-users">
       <div class="panel panel-default">
         <div class="panel-heading text-center">
           Haveしたユーザー
+        </div>
+        <div class="panel-body">
+          <% @have_users.each do |user| %>
+            <%= link_to user.name, user %>
+          <% end %>
         </div>
       </div>
     </div>
